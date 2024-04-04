@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat vs Dog Classifier</title>
+</head>
+<body>
+    <h1>Upload an image to classify</h1>
+    <form action="/predict" method="post" enctype="multipart/form-data">
+        <input type="file" name="image">
+        <input type="submit" value="Classify">
+    </form>
+    <div id="result"></div>
+
+    <script>
+        // JavaScript 用于处理预测结果
+        function showResult(resultText) {
+            document.getElementById('result').innerHTML = resultText;
+        }
+    </script>
+</body>
+</html>
